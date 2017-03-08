@@ -1,0 +1,103 @@
+.circle-range-select-wrapper {
+  width: 15em;
+  height: 15em;
+  max-width:300px;
+  max-height: 300px;
+  border-top: 3px solid blue;
+  border-left: 3px solid transparent;
+  border-right: 3px solid red;
+  border-bottom: 3px solid red;
+
+  border-width: 15px;
+}
+
+.circle-range-select-wrapper .handle:before {
+    content: '';
+    position: absolute;
+    z-index: 3;
+    top: -1.35em;
+    left: -1.15em;
+    height: 1.3em;
+    width: 1.3em;
+    border-radius: 50%;
+    background: #000;
+}
+
+.cprogress {
+    display: inline-block;
+    position: relative;
+    width: 1em;
+    height: 1em;
+    text-align: -webkit-match-parent;
+    font-size: 321px;
+    cursor: default;
+}
+
+.cprogress:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    -moz-border-radius: .5em;
+    -webkit-border-radius: .5em;
+    border-radius: .5em;
+    opacity: .5;
+    z-index: 0;
+    background: #df6c4f;
+}
+
+.cprogress:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: .1em;
+    left: .1em;
+    width: .8em;
+    height: .8em;
+    -moz-border-radius: .5em;
+    -webkit-border-radius: .5em;
+    border-radius: .5em;
+    z-index: 1;
+}
+
+.cprogress>#slice.gt50 {
+    clip: rect(auto, auto, auto, auto);
+}
+
+.cprogress>#slice {
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    clip: rect(0px, 1em, 1em, 0.5em);
+}
+
+.cprogress>#slice>.pie {
+    position: absolute;
+    border: .1em solid #df6c4f;
+    width: .8em;
+    height: .8em;
+    clip: rect(0em, 0.5em, 1em, 0em);
+    border-radius: .5em;
+}
+
+.cprogress>#slice>.pie.fill {
+    -moz-transform: rotate(180deg) !important;
+    -webkit-transform: rotate(180deg) !important;
+    -o-transform: rotate(180deg) !important;
+    transform: rotate(180deg) !important;
+}
+
+.percent {
+    font-size: 81px;
+    position: absolute;
+    text-align: center;
+    padding: 1em 0.5em 1em 0.5em;
+    width: 2.35em;
+    top: 0.41em;
+    left: 0.41em;
+    background: rgb(245, 245, 245);
+    border-radius: 2.35em;
+    font-weight: normal;
+    width: 176px;
+}
